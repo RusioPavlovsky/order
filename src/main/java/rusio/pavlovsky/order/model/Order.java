@@ -14,7 +14,7 @@ import java.util.UUID;
 public class Order {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "order_order_id_sequence")
     @SequenceGenerator(name = "order_order_id_sequence", sequenceName = "order_order_id_sequence", allocationSize = 1)
     Long id;
     UUID orderId;
